@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>Task 5</title>
+  </head>
+
+  <body>
+    <h1
+      style="
+        background-color: #222;
+        color: #fff;
+        padding: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+      "
+      className="title">
+      Task 5
+    </h1>
+
+    <div class="container w-75">
+      <select
+        class="form-control mb-4"
+        lang="en"
+        onchange="reload()"
+        id="language"
+      >
+        <option>USA</option>
+        <option>Russia</option>
+        <option>Poland</option>
+      </select>
+      <input
+        type="text"
+        placeholder="Number of errors"
+        onchange="refresh()"
+        class="form-control mb-4"
+        lang="en"
+        id="erren"
+      />
+      <input
+        style="display: none"
+        onchange="refresh()"
+        type="text"
+        placeholder="Количество ошибок"
+        class="form-control mb-4"
+        lang="ru"
+        id="errru"
+      />
+      <input
+        style="display: none"
+        type="text"
+        onchange="refresh()"
+        placeholder="liczba błędów"
+        class="form-control mb-4"
+        lang="pl"
+        id="errpl"
+      />
+      <input
+        type="text"
+        placeholder="Enter seed"
+        onchange="refresh()"
+        class="form-control mb-4"
+        lang="en"
+        id="seeden"
+      />
+      <input
+        style="display: none"
+        type="text"
+        onchange="refresh()"
+        placeholder="Укажите seed"
+        class="form-control"
+        lang="ru"
+        id="seedru"
+      />
+      <input
+        style="display: none"
+        type="text"
+        onchange="refresh()"
+        placeholder="Wchodzić seed"
+        class="form-control"
+        lang="pl"
+        id="seedpl"
+      />
+      <input
+        class="btn btn-dark my-4"
+        type="button"
+        value="Get Data"
+        onclick="getData()"
+        lang="en"
+      />
+      <button
+        class="btn btn-primary my-4"
+        onclick="table2csv(this,1)"
+        data-table="table"
+        lang="en"
+      >
+        Download CSV
+      </button>
+      <input
+        class="btn btn-dark my-4"
+        type="button"
+        value="Получить данные"
+        onclick="getData()"
+        lang="ru"
+        style="display: none"
+      />
+      <button
+        class="btn btn-primary my-4"
+        onclick="table2csv(this,1)"
+        data-table="table"
+        lang="ru"
+        style="display: none"
+      >
+        Скачать CSV
+      </button>
+      <input
+        class="btn btn-dark my-4"
+        type="button"
+        value="Zatwierdź"
+        onclick="getData()"
+        lang="pl"
+        style="display: none"
+      />
+      <button
+        class="btn btn-primary my-4"
+        onclick="table2csv(this,1)"
+        data-table="table"
+        style="display: none"
+        lang="pl"
+      >
+        Ściągnij CSV
+      </button>
+      <table class="table table-striped mt-5" id="table">
+        <thead>
+          <tr>
+            <td class="bold" scope="col">Index</td>
+            <td class="bold" scope="col">Full Name</td>
+            <td class="bold" scope="col">Phone</td>
+            <td class="bold" scope="col">Id</td>
+            <td class="bold" scope="col">Address</td>
+            <td class="bold" scope="col">Email</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <script src="https://yunisdev.github.io/table2csv/table2csv.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
